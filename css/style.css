@@ -1382,6 +1382,30 @@ footer button.mypage i {
   background-size: 20px;
 }
 
+.photo-detail-view .photo .swiper-button-next:after,
+.photo-detail-view .photo .swiper-button-prev:after {
+  color: #fff;
+  font-size: 30px;
+}
+
+.photo-detail-view .swiper-pagination {
+  height: 20px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  display: inline-block;
+  width: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: -30px;
+}
+.photo-detail-view .swiper-pagination-current {
+  font-weight: 600;
+}
+
 /*comment-wrap*/
 .comment-wrap {
   padding: 20px 10px;

@@ -497,12 +497,9 @@ footer button.mypage i {
   line-height: 32px;
   border-bottom: 1px solid #dcdcdc;
 }
-.news-list ul li:first-child a {
-  background-color: #f2f2f2;
-  color: #000;
-  font-weight: 600;
-  line-height: 33px;
-}
+
+
+
 
 /*weather-wrap*/
 .weather-wrap {
@@ -697,7 +694,7 @@ footer button.mypage i {
 }
 .photo-list.typeA ul li button .photo {
   width: 120px;
-  height: 70px;
+  height: 90px;
   margin-right: 10px;
 }
 .photo-list.typeA ul li button .photo img {
@@ -843,7 +840,7 @@ footer button.mypage i {
   background-size: 16px;
 }
 .photo-list.typeC ul li div.title .etc span.like i {
-  background: url(../images/ic-like-xs.png) center center no-repeat;
+  background: url(../images/ic-like.png) center center no-repeat;
   background-size: 16px;
 }
 
@@ -896,6 +893,32 @@ footer button.mypage i {
   text-align: left;
   padding: 0 0;
   margin-bottom: 10px;
+}
+
+
+.photo-list .etc {
+  font-size: 12px;
+  color: #666;
+}
+.photo-list .etc i {
+  vertical-align: sub;
+  width: 16px;
+  height: 16px;
+}
+
+.photo-list .etc span.view i {
+  background: url(../images/ic-eye.png) center center no-repeat;
+  background-size: 16px;
+}
+.photo-list .etc span.comment i {
+  background: url(../images/ic-comen.png) center center no-repeat;
+  background-size: 16px;
+  margin-left: 5px;
+}
+.photo-list .etc span.like i {
+  background: url(../images/ic-like-xs.png) center center no-repeat;
+  background-size: 16px;
+  margin-left: 5px;
 }
 
 /*notice-wrap*/
@@ -1122,7 +1145,7 @@ footer button.mypage i {
   background-size: 16px;
 }
 .tv-view .etc span.like i {
-  background: url(../images/ic-like-xs.png) center center no-repeat;
+  background: url(../images/ic-like.png) center center no-repeat;
   background-size: 16px;
 }
 
@@ -1180,7 +1203,7 @@ footer button.mypage i {
   font-size: 12px;
 }
 .detail-view .etc-cont > div .like i {
-  background: url(../images/ic-hart.png) center center no-repeat;
+  background: url(../images/ic-like.png) center center no-repeat;
   background-size: 20px;
 }
 .detail-view .etc-cont > div .comment {
@@ -1198,7 +1221,7 @@ footer button.mypage i {
   background-size: 20px;
 }
 .detail-view .etc-cont > div:last-child {
-  width: 50%;
+  width: 60%;
   text-align: right;
 }
 .detail-view .etc-cont > div:last-child button {
@@ -1217,8 +1240,9 @@ footer button.mypage i {
 
 .detail-view .etc-cont > div button.share {
   font-size: 13px;
-  margin-left: 5px;
+  margin-left: 3px;
   width: 60px;
+  padding-left: 4px;
 }
 .detail-view .etc-cont > div button.share i {
   width: 20px;
@@ -1227,6 +1251,31 @@ footer button.mypage i {
   background: url(../images/ic-share.png) center center no-repeat;
   background-size: 20px;
 }
+
+.detail-view .etc-cont > div button.sound {
+  font-size: 13px;
+  margin-left: 3px;
+  width: 60px;
+  padding-left: 4px;
+}
+
+.detail-view .etc-cont > div button.sound i {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  background: url(../images/ic-sound.png) center center no-repeat;
+  background-size: 20px;
+}
+
+.red { 
+  background-color: red;
+  border: 1px solid #d40000;
+  padding: 0px 5px;
+  color: #fff;
+  font-size: 12px;
+  margin-right: 3px;
+  line-height: 18px; }
+
 
 .detail-view .photo {
   margin: 10px 0;
@@ -1257,7 +1306,7 @@ footer button.mypage i {
   margin-right: 5px;
 }
 .detail-view .share-cont button.like i {
-  background: url(../images/ic-hart.png) center center no-repeat;
+  background: url(../images/ic-like.png) center center no-repeat;
   background-size: 20px;
 }
 .detail-view .share-cont button.share i {
@@ -1454,9 +1503,82 @@ footer button.mypage i {
   margin-bottom: 5px;
 }
 
+/*상위 3위 댓글*/
+.comment-cont-top {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+  background-color: #f5f5f5;
+}
+.comment-cont-top .nikname {
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.comment-cont-top .nikname > div {
+  flex: 1;
+  text-align: left;
+}
+.comment-cont-top .nikname > div:last-child {
+  text-align: right;
+}
+
+.comment-cont-top .nikname em {
+  font-size: 12px;
+  font-style: normal;
+}
+
+.comment-cont-top .txt {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.comment-cont-top .declaration {
+  background: url(../images/ic-singo.png) center center no-repeat;
+  background-size: 20px;
+  text-indent: -9999px;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.comment-cont-top .etc {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.comment-cont-top .etc i {
+  font-size: 12px;
+  width: 30px;
+  height: 20px;
+  margin-right: 3px;
+}
+.comment-cont-top div {
+  text-align: right;
+}
+
+.comment-cont-top .etc .like {
+  background: url(../images/ic-like.png) left center no-repeat;
+  background-size: 20px;
+  padding-left: 20px;
+}
+.comment-cont-top .etc .bed {
+  background: url(../images/ic-bed.png) left center no-repeat;
+  background-size: 20px;
+  padding-left: 20px;
+}
+/* 일반댓글 */
 .comment-cont {
   border-bottom: 1px solid #dcdcdc;
-  padding: 10px 0;
+  padding: 10px;
   font-size: 14px;
   text-align: left;
 }
@@ -1477,6 +1599,7 @@ footer button.mypage i {
 .comment-cont .nikname em {
   font-size: 12px;
   font-style: normal;
+  margin-bottom: 10px;
 }
 
 .comment-cont .txt {
@@ -1497,14 +1620,14 @@ footer button.mypage i {
 }
 
 .comment-cont .etc {
-  margin-top: 5px;
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 .comment-cont .etc i {
   font-size: 12px;
-  width: 40px;
+  width: 30px;
   height: 20px;
   margin-right: 3px;
 }
@@ -1522,6 +1645,20 @@ footer button.mypage i {
   background-size: 20px;
   padding-left: 20px;
 }
+
+.comment-btn {
+  width: 80px;
+  margin-left: 5px;
+  border: 1px solid #e52d29;
+  height: 35px;
+  line-height: 35px;
+  margin-top: -5px;
+  color: #fff;
+  background-color: #e52d29;
+}
+
+
+
 
 /*mypage-wrap*/
 .mypage-wrap {

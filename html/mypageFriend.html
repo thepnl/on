@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/ghm.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/front.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="mypage-wrap">
+        <div class="mypage-header"><i class="ic login"></i> 구독자 관리</div>
+        <div class="mypage-list">
+        </div>
+        <!-- content form -->
+        <div id="content">
+          <div class="friend-list">
+            <div class="list-wrap" v-show="receiveList.length > 0">
+              <div class="title">
+                신청 받은 구독자 <span>1</span>명
+              </div>
+              <div class="list">
+                <div data-v-b915ddbc="" class="friend-item"><div class="img" style="background-image: url(&quot;https://khmondkb.s3.ap-northeast-2.amazonaws.com/1638508394797_1637718865375.jpg&quot;);"></div> <span>할렐루야****</span> 
+                <div class="button-group"><button type="button" class="deny">삭제</button></div></div>
+                <div v-for="f in receiveList" :key="`receive_${f.userId}`" class="friend-item">
+                  <div class="img" :style="`background-image: url(\'${f.image}\');`" @click="$router.push(`/user/other?id=${f.userId}`)"></div>
+                  <span>{{f.identification}}</span>
+                  <div class="button-group">
+                    <button class="add" type="button" @click="acceptFriend(f.userId)">추가</button>
+                    <button class="deny" type="button" @click="denyFriend(f.userId)">거절</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-wrap" v-show="requestList.length > 0">
+              <div class="title">
+                신청한 구독자 <span>1</span>명
+              </div>
+              <div class="list">
+                <div v-for="f in requestList" :key="`request_${f.userId}`" class="friend-item">
+                  <div class="img" :style="`background-image: url(\'${f.image}\');`" @click="$router.push(`/user/other?id=${f.userId}`)"></div>
+                  <span>{{f.identification}}</span>
+                  <div class="button-group">
+                    <button class="deny" type="button" @click="denyFriend(f.userId)">취소</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list-wrap" v-show="friendList.length > 0">
+              <div class="title">
+                구독자 <span>1</span>명
+              </div>
+              <div class="list">
+                <div v-for="f in friendList" :key="`friend_${f.userId}`" class="friend-item">
+                  <div class="img" :style="`background-image: url(\'${f.image}\');`" @click="$router.push(`/user/other?id=${f.userId}`)"></div>
+                  <span>{{f.identification}}</span>
+                  <div class="button-group">
+                    <button class="deny" type="button" @click="denyFriend(f.userId)">삭제</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- content form end -->
+      </div>
+    </div>
+    <!--//wrap-->
+    <footer>
+      <button type="button" class="home on"><i></i>홈</button>
+      <button type="button" class="talk"><i></i>펜팔</button>
+      <button type="button" class="write"><i></i>글쓰기</button>
+      <button type="button" class="mall"><i></i>광화문몰</button>
+      <button type="button" class="mypage"><i></i>내정보</button>
+    </footer>
+  </body>
+</html>

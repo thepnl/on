@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/ghm.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script type="text/javascript" src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="../js/front.js"></script>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="mypage-wrap">
+        <div class="mypage-header"><i class="ic login"></i> 입력하기</div>
+        <div class="mypage-list">
+        </div>
+        <div class="tab-list mb20">
+          <button type="button" class="on">글등록</button>
+          <button type="button" class="">사진등록</button>
+        </div>
+        <!-- content form -->
+        <div id="content">
+       
+          <div id="content">
+            <div class="cmm-list-view">
+              <div class="area-box" style="padding-top: 0.1rem;margin-bottom: 0">
+                <div class="cmm-form">
+                  <div class="select">
+                    <select v-model="form.boardCategoryId">
+                      <option :value="null" disabled>카테고리 선택</option>
+                      <option v-for="c in info.boardCategory" :value="c.boardCategoryId" :key="`boardCategory${c.boardCategoryId}`">{{ c.boardCategory }}</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="cmm-form">
+                  <div class="input">
+                    <input v-model="form.title" type="text" placeholder="글 제목">
+                  </div>
+                </div>
+                <div class="cmm-form" v-if="form.files.length > 0">
+                  <div class="file-list">
+                    <span v-for="(file, idx) in form.files" :key="idx" @click="deleteFile(idx)">
+                      <video v-if="file.endsWith('mp4')" width="100%">
+                        <source :src="file" type="video/mp4">
+                      </video>
+                      <img v-else :src="file">
+                    </span>
+                  </div>
+                </div>
+                <div class="cmm-form">
+                  <div class="cmm-textarea">
+                    <div class="textarea" style="border: none;" v-html="form.content" placeholder="내용을 입력해주세요.
+      ※ 광고 목적의 스팸글, 타 회원에 대한 비방, 욕설, 유해 게시글, 오프라인 모임등의 글은 운영자에 의해 제한 됩니다." contenteditable="true" @focusout="updateContent" @focus="scrollToTop()"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <!-- content form end -->
+      </div>
+      <div class="btn-box m20">
+        <button type="button" class="btn-next" @click="submit()"><span>등록하기</span></button>
+      </div>
+    </div>
+
+    
+    <!--//wrap-->
+    <div id="footer">
+      <button type="button" class="photo upload-menu" @click="upload('camera')"><span>사진촬영</span></button>
+      <button type="button" class="video upload-menu" @click="upload('video')"><span>동영상촬영</span></button>
+      <button type="button" class="image upload-menu" @click="upload('image')"><span>사진이미지</span></button>
+    </div>
+  </body>
+</html>

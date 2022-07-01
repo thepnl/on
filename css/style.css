@@ -772,7 +772,6 @@ footer button.write i {
 .photo-list.typeB ul li button .tit {
   font-size: 14px;
   line-height: 18px;
-  display: flex;
   justify-content: start;
   align-items: flex-start;
   margin-bottom: 5px;

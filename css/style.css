@@ -418,6 +418,13 @@ footer button {
   text-align: center;
   font-size: 12px;
 }
+footer button.write {
+  background-color: #e52d29; 
+  padding: 20px;
+  margin: 0 -20px;
+  color: #fff;
+}
+
 footer button i {
   width: 35px;
   height: 35px;
@@ -447,6 +454,10 @@ footer button.mall i {
 }
 footer button.mypage i {
   background: url(../images/ic-foot-05.png) center center no-repeat;
+  background-size: 30px;
+}
+footer button.write i {
+  background: url(../images/ic-foot-06.png) center center no-repeat;
   background-size: 30px;
 }
 
@@ -1045,7 +1056,7 @@ footer button.mypage i {
   border-bottom: 1px solid #dadada;
 }
 .event-list ul li button {
-  height: 80px;
+  height: 100px;
   text-align: left;
   font-size: 12px;
 }
@@ -1101,6 +1112,30 @@ footer button.mypage i {
   margin-bottom: 10px;
   margin-right: 10px;
 }
+
+.event-list .etc {
+  font-size: 12px;
+  color: #666;
+}
+.event-list .etc i {
+  vertical-align: sub;
+  width: 16px;
+  height: 16px;
+}
+
+.event-list ul li .etc span.view i {
+  background: url(../images/ic-eye.png) center center no-repeat;
+  background-size: 16px;
+}
+.event-list ul li .etc span.comment i {
+  background: url(../images/ic-comen.png) center center no-repeat;
+  background-size: 16px;
+}
+.event-list ul li .etc span.like i {
+  background: url(../images/ic-like.png) center center no-repeat;
+  background-size: 16px;
+}
+
 
 /* TV-view */
 .tv-view {
@@ -1218,6 +1253,21 @@ footer button.mypage i {
 }
 .detail-view .etc-cont > div .comment i {
   background: url(../images/ic-comment.png) center center no-repeat;
+  background-size: 20px;
+}
+.detail-view .etc-cont > div .view {
+  border: 1px solid #ccc;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 43%;
+  float: left;
+  margin-right: 5px;
+  font-size: 12px;
+}
+.detail-view .etc-cont > div .view i {
+  background: url(../images/ic-eye.png) center center no-repeat;
   background-size: 20px;
 }
 .detail-view .etc-cont > div:last-child {
@@ -1657,6 +1707,212 @@ footer button.mypage i {
   background-color: #e52d29;
 }
 
+/*point-wrap*/
+.point-wrap {
+  padding: 0px 10px;
+
+  clear: both;
+}
+.point-wrap .more {
+  border: none;
+  margin-top: 10px;
+}
+.point-wrap .more button {
+  color: #333;
+  font-size: 16px;
+}
+.point-tit {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.point-tit span {
+  color: #e52d29;
+}
+
+.point-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #dcdcdc;
+  font-size: 14px;
+}
+
+.point-input input {
+  border: 1px solid #e52d29;
+  border-radius: 0;
+  height: 35px;
+  margin-bottom: 5px;
+  width: 100%;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.point-input input:focus {
+  outline: none;
+}
+.point-input select {
+  font-size: 14px;
+  border: none;
+  margin-bottom: 5px;
+}
+
+/*상위 3위 댓글*/
+.point-cont-top {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+  background-color: #f5f5f5;
+}
+.point-cont-top .nikname {
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.point-cont-top .nikname > div {
+  flex: 1;
+  text-align: left;
+}
+.point-cont-top .nikname > div:last-child {
+  text-align: right;
+}
+
+.point-cont-top .nikname em {
+  font-size: 12px;
+  font-style: normal;
+}
+
+.point-cont-top .txt {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.point-cont-top .declaration {
+  background: url(../images/ic-singo.png) center center no-repeat;
+  background-size: 20px;
+  text-indent: -9999px;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.point-cont-top .etc {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.point-cont-top .etc i {
+  font-size: 12px;
+  width: 30px;
+  height: 20px;
+  margin-right: 3px;
+}
+.point-cont-top div {
+  text-align: right;
+}
+
+.point-cont-top .etc .like {
+  background: url(../images/ic-like.png) left center no-repeat;
+  background-size: 20px;
+  padding-left: 20px;
+}
+.point-cont-top .etc .bed {
+  background: url(../images/ic-bed.png) left center no-repeat;
+  background-size: 20px;
+  padding-left: 20px;
+}
+
+
+.point-cont {
+  border-bottom: 1px solid #dcdcdc;
+  padding: 10px;
+  font-size: 14px;
+  text-align: left;
+}
+.point-cont .nikname {
+  color: #666;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+.point-cont .nikname > div {
+  flex: 1;
+  text-align: left;
+}
+.point-cont .nikname > div:last-child {
+  text-align: right;
+  margin: 10px 0px;
+  color: red;
+}
+
+.point-cont .nikname em {
+  font-style: normal;
+  margin: 10px 0px;
+  font-size: 12px;
+  color: #9f9b9b;
+}
+
+.point-cont .txt {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.point-cont .declaration {
+  background: url(../images/ic-singo.png) center center no-repeat;
+  background-size: 20px;
+  text-indent: -9999px;
+  font-size: 0;
+  width: 20px;
+  height: 20px;
+}
+
+.point-cont .etc {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.point-cont .etc i {
+  font-size: 12px;
+  width: 30px;
+  height: 20px;
+  margin-right: 3px;
+}
+.point-cont div {
+  text-align: right;
+}
+
+.point-cont .etc .like {
+  background: url(../images/ic-like.png) left center no-repeat;
+  background-size: 20px;
+  padding-left: 20px;
+}
+.point-cont .etc .bed {
+  background: url(../images/ic-bed.png) left center no-repeat;
+  background-size: 20px;
+  padding-left: 20px;
+}
+
+.point-btn {
+  width: 80px;
+  margin-left: 5px;
+  border: 1px solid #e52d29;
+  height: 35px;
+  line-height: 35px;
+  margin-top: -5px;
+  color: #fff;
+  background-color: #e52d29;
+}
+
 
 
 
@@ -1741,6 +1997,18 @@ footer button.mypage i {
   background-size: 25px;
 }
 
+
+/*mypagecontent*/
+#content {
+  position: relative;
+  margin: auto;
+  max-width: 750px;
+  min-height: 100%;
+}
+
+
+
+
 /*login-wrap*/
 .login-wrap .logo {
   background: url(../images/h1-logo-1.png) center center no-repeat;
@@ -1818,4 +2086,97 @@ footer button.mypage i {
   background-color: #fff;
   color: #e52d29;
   border: 1px solid #e52d29;
+}
+
+/* modal */
+.modal-btn-box{
+  width:100%;
+  text-align:center;
+}
+.modal-btn-box button{
+  display:inline-block;
+  width:150px;
+  height:50px;
+  background-color:#ffffff;
+  border:1px solid #e1e1e1;
+  cursor:pointer;
+  padding-top:8px;
+}
+.popup-wrap{
+  background-color:rgba(0,0,0,.3);
+  justify-content:center;
+  align-items:center;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  display:none;
+  padding:15px;
+}
+.popup{
+  width:100%;
+  max-width:400px;
+  background-color:#e94540;
+  border-radius:10px;
+  overflow:hidden;
+  border-top: 1px solid black;
+  box-shadow: 5px 10px 10px 1px rgba(0,0,0,.3);
+}
+.popup-head{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.head-title {
+    font-size: 38px;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: -3px;
+    text-align: center;
+}
+.popup-body{
+  width:100%;
+  background-color:#ffffff;
+}
+.body-content{
+  width:100%;
+  padding:30px;
+}
+.body-titlebox{
+  text-align:center;
+  width:100%;
+  height:40px;
+  margin-bottom:10px;
+}
+.body-contentbox{
+  word-break:break-word;
+  overflow-y:auto;
+  margin-top: 40px;
+  min-height:100px;
+  max-height:200px;
+  text-align: center;
+}
+.popup-foot{
+  width:100%;
+  height:50px;
+}
+.pop-btn{
+  display:inline-flex;
+  width:50%;
+  height:100%;
+  float:left;
+  justify-content:center;
+  align-items:center;
+  color:#ffffff;
+  cursor:pointer;
+}
+.pop-btn.confirm{
+  border-right:1px solid #d10101;
+}
+
+.pop-btn.close {
+  background-color: #bab9b9;
 }

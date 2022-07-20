@@ -356,6 +356,7 @@ header h1 {
 h2.title {
   font-size: 18px;
   font-weight: 600;
+  ㄴ
 }
 h3.title {
   font-size: 16px;
@@ -488,6 +489,41 @@ footer button.write i {
   border-bottom: 1px solid #e52d29;
   color: #e52d29;
 }
+
+
+/*tab-list2*/
+.tab-list2 {
+  display: flex;
+  height: 50px;
+  justify-content: start;
+  align-items: center;
+  overflow-x: scroll;
+}
+.tab-list2 button {
+  flex: 1;
+  color: #666;
+  font-weight: 600;
+  min-width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tab-list2.flex0 button {
+  flex: 0;
+  min-width: 25%;
+  padding-bottom: 5px;
+}
+.tab-list2.flex0 button img {
+  width: 25px;
+}
+.tab-list2 button.on,
+.tab-list2 button:active {
+
+  color: #000;
+}
+
+
 
 /*news-list*/
 .news-list {
@@ -639,6 +675,7 @@ footer button.write i {
   border-bottom: 8px solid #eee;
   position: relative;
   padding: 20px 10px;
+  padding-bottom: 0px;
 }
 .article-wrap button.more {
   position: absolute;
@@ -651,7 +688,7 @@ footer button.write i {
   line-height: 18px;
 }
 .article-wrap ul li {
-  padding: 10px 0;
+  padding: 15px 0;
   text-align: left;
   border-bottom: 1px solid #dcdcdc;
 }
@@ -672,9 +709,11 @@ footer button.write i {
 }
 .article-wrap ul li button .txt {
   flex: 1;
+  margin-top: 10px;
 }
 .article-wrap ul li button .txt .tit {
-  font-weight: 500;
+  font-weight: 300;
+  margin-top: 5px;
   margin-bottom: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -698,7 +737,7 @@ footer button.write i {
 .photo-list.typeA ul li button {
   display: block;
   width: 100%;
-  padding: 10px 0;
+  padding: 15px 0;
   display: flex;
   justify-content: start;
   align-items: flex-start;
@@ -727,7 +766,7 @@ footer button.write i {
   -webkit-line-clamp: 2; /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 20px;
   text-align: left;
   margin-bottom: 10px;
@@ -770,7 +809,7 @@ footer button.write i {
 }
 
 .photo-list.typeB ul li button .tit {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 18px;
   justify-content: start;
   align-items: flex-start;
@@ -805,8 +844,8 @@ footer button.write i {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  height: 80px;
-  padding: 10px 0;
+  height: 100px;
+  padding: 20px 0;
 }
 .photo-list.typeC ul li > span {
   color: #e52d29;
@@ -826,7 +865,7 @@ footer button.write i {
   -webkit-line-clamp: 2; /* 라인수 */
   -webkit-box-orient: vertical;
   word-wrap: break-word;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 18px;
   text-align: left;
 }
@@ -1301,6 +1340,21 @@ footer button.write i {
   background-size: 20px;
 }
 
+.detail-view .etc-cont > div button.singo {
+  font-size: 13px;
+  margin-left: 3px;
+  width: 60px;
+ 
+}
+
+.detail-view .etc-cont > div button.singo i {
+  width: 20px;
+  height: 20px;
+  
+  background: url(../images/ic-singo.png) center center no-repeat;
+  background-size: 20px;
+}
+
 .detail-view .etc-cont > div button.sound {
   font-size: 13px;
   margin-left: 3px;
@@ -1362,6 +1416,10 @@ footer button.write i {
   background: url(../images/ic-share.png) center center no-repeat;
   background-size: 20px;
 }
+.detail-view .share-cont button.tae i {
+  background: url(../images/ic-tae.png) center center no-repeat;
+  background-size: 20px;
+}
 
 .detail-view .txt-ul {
   font-size: 16px;
@@ -1405,8 +1463,7 @@ footer button.write i {
   border-bottom: 8px solid #dcdcdc;
 }
 .photo-detail-view .photo {
-  height: 250px;
-  margin-bottom: 10px;
+  height: 100%;
 }
 .photo-detail-view .photo img {
   width: 100%;
@@ -2101,6 +2158,7 @@ footer button.write i {
   cursor:pointer;
   padding-top:8px;
 }
+
 .popup-wrap{
   background-color:rgba(0,0,0,.3);
   justify-content:center;
@@ -2162,6 +2220,7 @@ footer button.write i {
   width:100%;
   height:50px;
 }
+
 .pop-btn{
   display:inline-flex;
   width:50%;

@@ -585,7 +585,8 @@ button.dislike.on span{color: blue;}
 .chat-send .send-input-wrap input{width: 100%; border: none;height:100%;font-size:0.34rem;padding-left: 0.4rem; padding-right: 0.1rem;}
 .chat-send .send-input-wrap input::placeholder{color: rgb(84,83,83);}
 .chat-send .send-button-wrap {position: absolute;right:0.15rem;}
-.chat-send .send-button-wrap button{vertical-align: top;padding-bottom: 0.05rem;margin:0.24rem 0.1rem;width: 1.6rem; background-color: rgb(233,69,64);height: 0.7rem; border-radius: 0.35rem; color: white; text-align: center;font-size:0.35rem;}
+.chat-send .send-button-wrap .send-text {vertical-align: top;padding-bottom: 0.05rem;margin:0.24rem 0.1rem;width: 1rem; background-color: rgb(233,69,64);height: 0.7rem; border-radius: 0.35rem; color: white; text-align: center;font-size:0.35rem;}
+.chat-send .send-button-wrap .send-point{vertical-align: top;padding-bottom: 0.05rem;margin:0.2rem 0.1rem;width: 1rem; height: 0.7rem; border-radius: 0.35rem; color: white; text-align: center;font-size:0.35rem;}
 .chat-bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.3);z-index: 800}
 .chat-size-wrapper {position: absolute; top: 0.5rem; width: 6.2rem; z-index: 900; background: white; right: 0.5rem; height: 2rem; border-radius: .2rem;}
 .chat-size-wrapper .button-wrapper .bar {position: absolute; top: .6rem; left: .3rem; width: 5.4rem; height: 0.26rem; background: rgb(245,246,248); z-index: 920}
@@ -764,9 +765,13 @@ button.dislike.on span{color: blue;}
 .chat-wrap.bottom-auto {bottom: auto;}
 .chat-wrap .chat-infos {height: 1rem;background: #fff;position: relative;}
 .chat-wrap .chat-infos .left-info {padding:0.33rem 1rem 0.1rem 0.4rem;}
-.chat-wrap .chat-infos .left-info .main{font-size:0.28rem; height: 0.3rem; display: inline-block; margin-right: 0.5rem; vertical-align: top;}
+.chat-wrap .chat-infos .left-info .main{font-size:0.28rem;  display: inline-block; margin-right: 0.5rem; vertical-align: top;}
 .chat-wrap .chat-infos .left-info .main.active{color:#e94540;}
 .chat-wrap .chat-infos .left-info .main img{width: 0.45rem;vertical-align: top; margin-right: 0.1rem;}
+.chat-wrap .chat-infos2 {height: .7rem;background: #fff;position: relative;}
+.chat-wrap .chat-infos2 .left-info2 {padding:0rem 1rem 0.1rem 0.4rem;}
+.chat-wrap .chat-infos2 .left-info2 .point{font-size:0.28rem; background-color: #e52539; border-radius: 15px; color: #fff; padding: 2px 3px 2px 2px; display: inline-block; vertical-align: top;}
+.chat-wrap .chat-infos2 .left-info2 .point img{width: 0.45rem;vertical-align: top; }
 .chat-wrap .chat-infos .right-button{position: absolute; right:0.3rem; top: 0.31rem;font-size: 0.28rem; color: #444444}
 .chat-wrap .chat-infos .right-button b{font-weight:bold;vertical-align: top;margin-left: 0.05rem;}
 .chat-wrap .chat-messages {height: 100%;padding: 0.05rem 0.1rem 1.8rem 0.1rem;background-color:rgb(242,242,242)}
@@ -788,7 +793,6 @@ button.dislike.on span{color: blue;}
 .chat-send .send-input-wrap input{width: 100%; border: none;height:100%;font-size:0.34rem;padding-left: 0.4rem; padding-right: 0.1rem;}
 .chat-send .send-input-wrap input::placeholder{color: rgb(84,83,83);}
 .chat-send .send-button-wrap {position: absolute;right:0.15rem;}
-.chat-send .send-button-wrap button{vertical-align: top;padding-bottom: 0.05rem;margin:0.24rem 0.1rem;width: 1.6rem; background-color: rgb(233,69,64);height: 0.7rem; border-radius: 0.35rem; color: white; text-align: center;font-size:0.35rem;}
 .chat-bg {position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,.3);z-index: 800}
 .chat-size-wrapper {position: absolute; top: 0.5rem; width: 6.2rem; z-index: 900; background: white; right: 0.5rem; height: 2rem; border-radius: .2rem;}
 .chat-size-wrapper .button-wrapper .bar {position: absolute; top: .6rem; left: .3rem; width: 5.4rem; height: 0.26rem; background: rgb(245,246,248); z-index: 920}
